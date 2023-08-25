@@ -11,6 +11,10 @@ public class HashMap<K, V> implements Iterable<HashMap.Entity>{
     }
 
     class HashMapIterator implements Iterator<HashMap.Entity>{
+        // https://www.cyberforum.ru/java-j2se/thread1549495.html
+        private Bucket node;
+
+        Bucket.Node currentNode = node.head;
 
         // Начинаем с головы
         //Bucket.Node node = buckets.head;
@@ -23,8 +27,11 @@ public class HashMap<K, V> implements Iterable<HashMap.Entity>{
 
         @Override
         public Entity next() {
-            // доработать метод
-            return null;
+
+            if (hasNext()){
+                return currentNode.value;
+            }
+            else return null;
         }
     }
 
