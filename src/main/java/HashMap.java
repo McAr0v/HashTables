@@ -2,40 +2,7 @@ import java.util.Iterator;
 
 // K - key, ключ
 // V - value, значение
-public class HashMap<K, V> implements Iterable<HashMap.Entity>{
-
-    // ------- ПОСЛОЖНЕЕ МЕТОД ----
-    @Override
-    public Iterator<HashMap.Entity> iterator() {
-        return new HashMapIterator();
-    }
-
-    class HashMapIterator implements Iterator<HashMap.Entity>{
-        // https://www.cyberforum.ru/java-j2se/thread1549495.html
-        private Bucket node;
-
-        Bucket.Node currentNode = node.head;
-
-        // Начинаем с головы
-        //Bucket.Node node = buckets.head;
-
-        @Override
-        public boolean hasNext() {
-            // доработать метод
-            return false;
-        }
-
-        @Override
-        public Entity next() {
-
-            if (hasNext()){
-                return currentNode.value;
-            }
-            else return null;
-        }
-    }
-
-    // ------- КОНЕЦ ---------
+public class HashMap<K, V> {
 
     // ВЫВЕСТИ ВСЕ ЭЛЕМЕНТЫ ХЭЩТАБЛИЦЫ НА ЭКРАН через toString()
     @Override

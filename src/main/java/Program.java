@@ -18,13 +18,5 @@ public class Program {
 
         System.out.println(hashMap1);
 
-        for (HashMap<String, String>.Entity element: hashMap1) {
-
-            //element.key;
-            //element.value;
-
-        }
-
-
     }
 }
