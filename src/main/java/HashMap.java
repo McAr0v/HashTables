@@ -1,7 +1,34 @@
+import java.util.Iterator;
 
 // K - key, ключ
 // V - value, значение
-public class HashMap<K, V> {
+public class HashMap<K, V> implements Iterable<HashMap.Entity>{
+
+    // ------- ПОСЛОЖНЕЕ МЕТОД ----
+    @Override
+    public Iterator<HashMap.Entity> iterator() {
+        return new HashMapIterator();
+    }
+
+    class HashMapIterator implements Iterator<HashMap.Entity>{
+
+        // Начинаем с головы
+        //Bucket.Node node = buckets.head;
+
+        @Override
+        public boolean hasNext() {
+            // доработать метод
+            return false;
+        }
+
+        @Override
+        public Entity next() {
+            // доработать метод
+            return null;
+        }
+    }
+
+    // ------- КОНЕЦ ---------
 
     // ВЫВЕСТИ ВСЕ ЭЛЕМЕНТЫ ХЭЩТАБЛИЦЫ НА ЭКРАН через toString()
     @Override
@@ -59,6 +86,8 @@ public class HashMap<K, V> {
 
         return stringBuilder.toString();
     }
+
+
 
     // Entity - сущность,
     // Элемент Хэштаблицы

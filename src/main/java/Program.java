@@ -1,7 +1,7 @@
 public class Program {
 
     public static void main (String[] args){
-        
+
         // Создаем массив с бакетами
         HashMap<String, String> hashMap1 = new HashMap<>(4);
 
@@ -17,6 +17,13 @@ public class Program {
         oldValue = hashMap1.put("7771789639", "Сергей");
 
         System.out.println(hashMap1);
+
+        for (HashMap<String, String>.Entity element: hashMap1) {
+
+            //element.key;
+            //element.value;
+
+        }
 
 
     }
